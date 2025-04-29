@@ -1,11 +1,13 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom';
+import Dashboard from './pages/Dashboard';
 import Contacts from './pages/Contacts';
 function App() {
 
   return (
       <Routes>
-        <Route path='/' element={<Contacts />}>
-        </Route>
+        <Route path='/' element={<Dashboard />} />
+        <Route path='/Contacts' element={<Contacts />}/>
+
         
       </Routes>
   )
