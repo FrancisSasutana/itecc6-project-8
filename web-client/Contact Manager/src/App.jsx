@@ -1,11 +1,13 @@
-import { useState } from 'react'
-
+import { Routes, Route } from 'react-router-dom'
+import Contacts from './pages/Contacts';
 function App() {
 
   return (
-    <>
-    <h1 className='text-green-400'>Contact Manager</h1>
-    </>
+      <Routes>
+        <Route path='/' element={<Contacts />}>
+        </Route>
+        
+      </Routes>
   )
 }
 
