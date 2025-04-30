@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Dashboard from './pages/Dashboard.jsx';
 import Contacts from './pages/Contacts.jsx';
+import AddContact from './pages/AddContact.jsx';
 import Sidebar from './components/Sidebar.jsx';
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/contacts" element={<Contacts />} />
+          <Route path="/addContact" element={<AddContact />} />
         </Routes>
       </div>
     </div>

@@ -16,6 +16,9 @@ function Sidebar() {
         <NavLink to="/contacts" className={navLinkClasses}>
           Contacts
         </NavLink>
+        <NavLink to="/addContact" className={navLinkClasses}>
+          Add Contact
+        </NavLink>
       </nav>
     </aside>
   );
