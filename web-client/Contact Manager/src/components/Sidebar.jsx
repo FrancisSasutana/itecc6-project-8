@@ -1,23 +1,37 @@
 import { NavLink } from 'react-router-dom';
+import { FaTachometerAlt,FaAddressBook, FaPlus } from 'react-icons/fa';
+import { IoMdContact } from "react-icons/io";
 
-function Sidebar() {
+function Sidebar({ isOpen }) {
   const navLinkClasses = ({ isActive }) =>
-    `block px-4 py-2 rounded hover:bg-blue-500 ${
+    `flex items-center gap-2 px-4 py-2 rounded hover:bg-blue-500 ${
       isActive ? 'bg-green-800 font-semibold' : ''
     }`;
 
   return (
-    <aside className="w-64 bg-green-600 text-white h-full p-6">
-      <h1 className="text-2xl font-bold mb-6">Contact Manager</h1>
+    <aside className={`h-full p-4 bg-green-600 text-white transition-all duration-300 ${isOpen ? 'w-64' : 'w-20'}`}>
+
+      <div className={`flex flex-col items-center mb-8 transition-all duration-300 ${isOpen ? 'px-0' : 'px-4'}`}>
+        <IoMdContact className="text-white" size={isOpen ? 70 : 36} />
+        {isOpen && (
+          <h1 className="text-2xl font-extrabold mt-2 text-center">
+        Contact Manager
+          </h1>
+        )}
+      </div>
+
       <nav className="flex flex-col gap-2">
         <NavLink to="/" className={navLinkClasses}>
-          Dashboard
+          <FaTachometerAlt size={20} />
+          {isOpen && <span>Dashboard</span>}
         </NavLink>
         <NavLink to="/contacts" className={navLinkClasses}>
-          Contacts
+          <FaAddressBook size={20} />
+          {isOpen && <span>Contacts</span>}
         </NavLink>
         <NavLink to="/addContact" className={navLinkClasses}>
-          Add Contact
+          <FaPlus size={20} />
+          {isOpen && <span>Add Contact</span>}
         </NavLink>
       </nav>
     </aside>
