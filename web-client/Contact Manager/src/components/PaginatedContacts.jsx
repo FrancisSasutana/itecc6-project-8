@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import ContactsTable from './ContactsTable';
 
@@ -12,6 +12,10 @@ function PaginatedContacts({ contacts, itemsPerPage = 5 }) {
   const handlePageClick = ({ selected }) => {
     setCurrentPage(selected);
   };
+
+  useEffect(() => {
+    setCurrentPage(0); // Reset to first page when filtered contacts change
+  }, [contacts]);
 
   return (
     <div className="w-full flex flex-col items-center">
