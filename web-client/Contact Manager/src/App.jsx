@@ -11,16 +11,14 @@ function App() {
 
   return (
     <div className="flex h-screen">
-
       <Sidebar isOpen={isSidebarOpen} />
 
       <div className="flex-1 flex flex-col">
-
-        <div className="p-4 flex justify-start items-center">
+        <div className="pl-4 pt-2 pb-0">
           <BurgerMenu toggleSidebar={() => setIsSidebarOpen(prev => !prev)} isSidebarOpen={isSidebarOpen} />
         </div>
 
-        <div className="p-6 overflow-auto flex-1">
+        <div className="flex-1 p-6 overflow-auto">
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/contacts" element={<Contacts />} />
