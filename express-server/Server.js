@@ -1,17 +1,17 @@
 import express from 'express';
-import mysql2 from 'mysql2';
 import cors from 'cors';
-import dotenv from 'dotenv';
+import ViewContacts from '../express-server/Routes/ViewContacts.js'
 
 const app = express();
-dotenv.config();
+const PORT = 2468;
 
-const port = 2468;
+app.use(cors());
+app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send('Contact Manager')
-});
+
+app.use('/contacts', ViewContacts);
+
 
 app.listen(port, () => {
-  console.log(` Server listening on port ${port}`)
+  console.log(`Server running on http://localhost:${PORT}`);
 });
