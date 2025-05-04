@@ -9,7 +9,7 @@ function EditButton({ contact, refreshContacts}) {
   const closeModal = () => setIsOpen(false);
 
   const handleSave = () => {
-    refreshContacts()
+    refreshContacts();
     closeModal();
   };
 

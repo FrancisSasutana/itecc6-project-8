@@ -1,5 +1,6 @@
 import React from 'react';
 import EditButton from './EditButton';
+import DeleteButton from './DeleteButton';
 
 function ContactsTable({ contacts, refreshContacts }) {
 
@@ -28,8 +29,11 @@ function ContactsTable({ contacts, refreshContacts }) {
                 <td className="border px-4 py-2">{contact.relationship}</td>
                 <td className="border px-4 py-2">{contact.notes}</td>
                 <td className="border px-4 py-2">
+                <div className="flex gap-2">
                   <EditButton contact={contact} refreshContacts={refreshContacts} />
-                </td>
+                  <DeleteButton contactId={contact.id} refreshContacts={refreshContacts} />
+                </div>
+              </td>
               </tr>
             ))}
           </tbody>
