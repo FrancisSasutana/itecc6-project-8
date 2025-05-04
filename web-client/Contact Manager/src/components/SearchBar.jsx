@@ -8,7 +8,7 @@ function SearchBar({ onSearch }) {
         type="text"
         placeholder="Search contacts..."
         className="flex-1 text-black outline-none"
-        onChange={(e) => onSearch(e.target.value)} // <- important!
+        onChange={(e) => onSearch(e.target.value)}
       />
     </div>
   );

@@ -7,7 +7,7 @@ function Contacts() {
   const [contacts, setContacts] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
 
-  useEffect(() => {
+  const fetchContacts = () => {
     axios.get('http://localhost:2468/contacts')
       .then((res) => {
         setContacts(res.data);
@@ -15,6 +15,10 @@ function Contacts() {
       .catch((err) => {
         console.error('Error getting contacts:', err);
       });
+  };
+
+  useEffect(() => {
+    fetchContacts();
   }, []);
 
   const handleSearch = (query) => {
@@ -31,7 +35,7 @@ function Contacts() {
     <div className="flex flex-col items-center justify-start mt-[-1rem] w-full">
       <h1 className="text-green-800 text-3xl font-bold mb-2">Contacts</h1>
       <SearchBar onSearch={handleSearch} />
-      <PaginatedContacts contacts={filteredContacts} itemsPerPage={5} />
+      <PaginatedContacts contacts={filteredContacts} itemsPerPage={5} refreshContacts={fetchContacts} />
     </div>
   );
 }
