@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { FaTachometerAlt,FaAddressBook, FaPlus } from 'react-icons/fa';
+import { FaTachometerAlt,FaAddressBook, FaPlus, FaFileExport } from 'react-icons/fa';
 import { IoMdContact } from "react-icons/io";
 
 function Sidebar({ isOpen }) {
@@ -32,6 +32,10 @@ function Sidebar({ isOpen }) {
         <NavLink to="/addContact" className={navLinkClasses}>
           <FaPlus size={20} />
           {isOpen && <span>Add Contact</span>}
+        </NavLink>
+        <NavLink to="/exports" className={navLinkClasses}>
+          <FaFileExport size={20} />
+          {isOpen && <span>Exports</span>}
         </NavLink>
       </nav>
     </aside>

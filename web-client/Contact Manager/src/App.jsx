@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import axios from "axios"
+import axios from 'axios'
 import Dashboard from './pages/Dashboard.jsx';
 import Contacts from './pages/Contacts.jsx';
 import AddContact from './pages/AddContact.jsx';
+import Exports from './pages/Exports.jsx';
 import Sidebar from './components/Sidebar.jsx';
 import BurgerMenu from './components/BurgerMenu.jsx';
 
@@ -31,6 +32,7 @@ function App() {
             <Route path="/" element={<Dashboard contacts={contacts} />} />
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/addContact" element={<AddContact />} />
+            <Route path="/exports" element={<Exports contacts={contacts} />} />
           </Routes>
         </div>
       </div>
