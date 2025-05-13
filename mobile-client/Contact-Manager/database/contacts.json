@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Francis Sasutana",
+    "phone": "123-456",
+    "email": "francis@gmail.com",
+    "address": "Dopaj, Dupax del Sur, Nueva Vizcaya",
+    "relationship": "Bro",
+    "notes": "Sweet child o mine"
+  },
+  {
+    "id": 2,
+    "name": "Rona Ranjo",
+    "phone": "123-456",
+    "email": "rona@gmail.com",
+    "address": "Watwat, Kasibu, Nueva Vizcaya",
+    "relationship": "Sis",
+    "notes": "Symphony of Destruction"
+  },
+  {
+    "id": 3,
+    "name": " Ranjo",
+    "phone": "123-456",
+    "email": "rona@gmail.com",
+    "address": "Watwat, Kasibu, Nueva Vizcaya",
+    "relationship": "Sis",
+    "notes": "Symphony of Destruction"
+  },
+  {
+    "id": 4,
+    "name": "Sasutana",
+    "phone": "123-456",
+    "email": "rona@gmail.com",
+    "address": "Watwat, Kasibu, Nueva Vizcaya",
+    "relationship": "Sis",
+    "notes": "Symphony of Destruction"
+  }
+]
