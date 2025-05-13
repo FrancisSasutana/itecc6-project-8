@@ -7,7 +7,7 @@ export default function Contacts() {
   return (
     <BurgerMenu>
       <View style={{ alignItems: 'center', marginTop: 10 }}>
-        <Text style={{ fontSize: 24, color:'green', fontWeight: 'bold' }}>Contacts Page</Text>
+        <Text style={{ fontSize: 24, color:'green', fontWeight: 'bold' }}>Contacts</Text>
       </View>
       <View style={{ paddingHorizontal: 15 }}>
         <SearchBar />
