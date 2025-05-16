@@ -34,5 +34,23 @@
     "address": "Watwat, Kasibu, Nueva Vizcaya",
     "relationship": "Sis",
     "notes": "Symphony of Destruction"
+  },
+  {
+    "id": 5,
+    "name": "Francis Sasutana",
+    "phone": "123-456",
+    "email": "francis@gmail.com",
+    "address": "Dopaj, Dupax del Sur, Nueva Vizcaya",
+    "relationship": "Bro",
+    "notes": "Sweet child o mine"
+  },
+  {
+    "id": 6,
+    "name": "Francis Sasutana",
+    "phone": "123-456",
+    "email": "francis@gmail.com",
+    "address": "Dopaj, Dupax del Sur, Nueva Vizcaya",
+    "relationship": "Bro",
+    "notes": "Sweet child o mine"
   }
 ]

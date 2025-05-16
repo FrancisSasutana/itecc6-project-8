@@ -13,12 +13,10 @@ export default function BurgerMenu({ children }) {
   return (
     <View style={{ flex: 1, flexDirection: 'row' }}>
       
-      {/* Sidebar with collapsed prop */}
       <Sidebar collapsed={!isSidebarOpen} />
 
       <View style={{ flex: 1 }}>
 
-        {/* Toggle button with either 'menu-outline' or 'close-outline' */}
         <TouchableOpacity onPress={toggleSidebar} style={{ padding: 15 }}>
           <Ionicons
             name={isSidebarOpen ? 'close-outline' : 'menu-outline'}

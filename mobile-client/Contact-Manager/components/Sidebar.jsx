@@ -11,7 +11,7 @@ export default function Sidebar({ collapsed }) {
       paddingHorizontal: collapsed ? 10 : 20,
       backgroundColor: 'green',
       height: '100%',
-      width: collapsed ? 70 : 220,
+      width: collapsed ? 50 : 220,
       alignItems: collapsed ? 'center' : 'flex-start'
     }}>
       <View style={{ alignItems: 'center', marginBottom: 40 }}>
