@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import DeletePopUp from '.DeletePopUp';
+import DeletePopUp from './DeletePopUp';
 import axios from 'axios';
 import { FaTrash } from 'react-icons/fa';
 
