@@ -3,7 +3,7 @@ import React from 'react';
 
 function DeletePopUp({ onConfirm, onCancel }) {
   return (
-    <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-40">
+    <div className="fixed inset-0 flex justify-center items-center bg-[rgba(0,0,0,0.2)] bg-opacity-40">
       <div className="bg-white p-4 rounded shadow-md w-72 text-center">
         <p className="mb-4">Are you sure you want to delete this contact?</p>
         <div className="flex justify-around">

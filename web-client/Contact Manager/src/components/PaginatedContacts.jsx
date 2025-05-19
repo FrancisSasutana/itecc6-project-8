@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 import ContactsTable from './ContactsTable';
 import ReactPaginate from 'react-paginate';
 
-function PaginatedContacts({ contacts, itemsPerPage, refreshContacts }) {
+function PaginatedContacts({ contacts, itemsPerPage, refreshContacts, sortField }) {
   const [currentPage, setCurrentPage] = useState(0);
 
+  const sortedContacts = sortField
+    ? [...contacts].sort((a, b) => a[sortField]?.localeCompare(b[sortField] || '') || 0)
+    : contacts;
+
   const offset = currentPage * itemsPerPage;
-  const currentItems = contacts.slice(offset, offset + itemsPerPage);
+  const currentItems = sortedContacts.slice(offset, offset + itemsPerPage);
   const pageCount = Math.ceil(contacts.length / itemsPerPage);
 
   const handlePageClick = ({ selected }) => {

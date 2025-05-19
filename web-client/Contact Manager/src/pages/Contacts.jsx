@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import SearchBar from '../components/SearchBar';
+import SortsButton from '../components/SortsButton';
 import PaginatedContacts from '../components/PaginatedContacts';
 
 function Contacts() {
   const [contacts, setContacts] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
-
+  const [sortField, setSortField] = useState('');
+  
   const fetchContacts = () => {
     axios.get('http://localhost:2468/contacts')
       .then((res) => {
@@ -32,10 +34,21 @@ function Contacts() {
   );
 
   return (
-    <div className="flex flex-col items-center justify-start mt-[-1rem] w-full">
+    <div className="flex flex-col items-center justify-start mt-[-1rem] w-full px-4">
       <h1 className="text-green-800 text-3xl font-bold mb-2">Contacts</h1>
-      <SearchBar onSearch={handleSearch} />
-      <PaginatedContacts contacts={filteredContacts} itemsPerPage={5} refreshContacts={fetchContacts} />
+  
+      {/* Flex row for Search and Sort */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between w-full max-w-3xl gap-4 mb-4">
+        <SearchBar onSearch={handleSearch} />
+        <SortsButton sortField={sortField} setSortField={setSortField} />
+      </div>
+  
+      <PaginatedContacts
+        contacts={filteredContacts}
+        itemsPerPage={5}
+        refreshContacts={fetchContacts}
+        sortField={sortField}
+      />
     </div>
   );
 }
