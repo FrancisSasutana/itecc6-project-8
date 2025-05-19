@@ -11,13 +11,13 @@ export default function Sidebar({ collapsed }) {
       paddingHorizontal: collapsed ? 10 : 20,
       backgroundColor: 'green',
       height: '100%',
-      width: collapsed ? 50 : 220,
+      width: collapsed ? 40 : 130,
       alignItems: collapsed ? 'center' : 'flex-start'
     }}>
-      <View style={{ alignItems: 'center', marginBottom: 40 }}>
+      <View style={{ alignItems: 'center', marginBottom: 20 }}>
         <Ionicons name="person-circle-outline" size={collapsed ? 40 : 80} color="white" />
         {!collapsed && (
-          <Text style={{ fontSize: 20, color: 'white', fontWeight: 'bold', marginTop: 10 }}>
+          <Text style={{ fontSize: 20, color: 'white', fontWeight: 'bold', marginTop: 5, textAlign: 'center', marginBottom: 5 }}>
             Contact Manager
           </Text>
         )}

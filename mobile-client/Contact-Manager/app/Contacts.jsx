@@ -10,14 +10,14 @@ export default function Contacts() {
       <View style={{ alignItems: 'center', marginTop: 10 }}>
         <Text style={{ fontSize: 24, color:'green', fontWeight: 'bold' }}>Contacts</Text>
       </View>
-      <View style={{ paddingHorizontal: 15 }}>
+      <View>
         <SearchBar />
       </View>
         <View
           style={{
             flexDirection: 'row',
             flexWrap: 'wrap',
-            justifyContent: 'center' 
+            justifyContent: 'center'           
           }}
         >
           {Database.map((contact) => (

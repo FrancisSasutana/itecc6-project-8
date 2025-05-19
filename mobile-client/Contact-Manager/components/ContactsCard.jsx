@@ -10,7 +10,7 @@ export default function ContactsCard({ contact }) {
       style={styles.card}
       onPress={() => router.push({ pathname: '/Details', params: { id: contact.id } })}
     >
-      <Ionicons name="person-circle-outline" size={30} color="#fff" style={{ marginRight: 10 }} />
+      <Ionicons name="person-circle-outline" size={30} color="#fff" style={{marginRight: 10 }} />
       <Text style={styles.name}>{contact.name}</Text>
     </TouchableOpacity>
   );
@@ -20,7 +20,6 @@ const styles = StyleSheet.create({
   card: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
     backgroundColor: '#4CAF50',
     borderRadius: 10,
     padding: 10, 
