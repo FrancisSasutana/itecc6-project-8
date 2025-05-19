@@ -1,4 +1,4 @@
-import DashboardCards from "../components/DashboardCards";
+import DashboardCards from "../components/Dashboard/DashboardCards";
 
 function Dashboard({ contacts }) {
   return (

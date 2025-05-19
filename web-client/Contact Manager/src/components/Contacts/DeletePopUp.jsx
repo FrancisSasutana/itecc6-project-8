@@ -1,6 +1,3 @@
-
-import React from 'react';
-
 function DeletePopUp({ onConfirm, onCancel }) {
   return (
     <div className="fixed inset-0 flex justify-center items-center bg-[rgba(0,0,0,0.2)] bg-opacity-40">

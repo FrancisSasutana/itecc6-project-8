@@ -1,8 +1,8 @@
-import ExportCsv from "../components/ExportCsv";
-import ExportJson from "../components/ExportJson";
-import ExportExcel from "../components/ExportExcel";
-import ExportPdf from "../components/ExportPdf";
-import ExportXml from "../components/ExportXml";
+import ExportCsv from "../components/Exports/ExportCsv";
+import ExportJson from "../components/Exports/ExportJson";
+import ExportExcel from "../components/Exports/ExportExcel";
+import ExportPdf from "../components/Exports/ExportPdf";
+import ExportXml from "../components/Exports/ExportXml";
 
 function Exports({ contacts }) {
   return (
